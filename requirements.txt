@@ -1,0 +1,13 @@
+tensorflow 
+keras
+imutils
+numpy
+matplotlib
+argparse
+scipy
+scikit-learn
+pillow
+streamlit
+googledrivedownloader
+opencv-python
+protobuf==3.20.*
