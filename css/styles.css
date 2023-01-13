@@ -1,16 +1,59 @@
-/* Changing body color to dark grey and text color to gainsboro(version of white) */
 body {
-    color: gainsboro;
-    background-color: #333;
+    font-family: Arial, sans-serif;
+    background-color: #e5f5ff;
+}
+h1, h2, h3 {
+    color: #0077c9;
+    text-align: center;
+}
+.selectbox {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #0077c9;
+    border-radius: 4px;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+.selectbox:hover {
+    border: 2px solid #0077c9;
+}
+.file_uploader {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #0077c9;
+    border-radius: 4px;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+.file_uploader:hover {
+    border: 2px solid #0077c9;
+}
+.button {
+    background-color: #0077c9;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.button:hover {
+    background-color: #0077c9;
+}
+.sidebar {
+    background-color: #0077c9;
+    color: #fff;
+    padding: 20px;
 }
 
-/* Changing sideline color to light gray and text color to black */
-.sidebar .sidebar-content {
-    background-color: #c1c1c1;
-    background-image: none;
-    color: black;
+div.reportview-container {
+    background-color: #0077c9;
 }
-
-/* Removing Main Menubar and Footer */
-#MainMenu {visibility: hidden;}
-footer {visibility: hidden;}

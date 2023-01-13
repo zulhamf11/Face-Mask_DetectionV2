@@ -11,8 +11,8 @@ from tensorflow.keras.preprocessing.image import img_to_array
 
 
 filepath = './face_detector/'
-model_path = './model_test/mask_detector.h5'
-model_video = './model_test/mask_detector.model'
+model_path = './model_test/mask_detectors.h5'
+model_video = './model_test/mask_detectors.model'
 image_test = './images_test/'
 MY_CONFIDENCE = 0.9
 BATCH_SIZE = 32
@@ -172,9 +172,8 @@ def mask_detection():
     choice = st.sidebar.selectbox('Choose among the given options:', activities)
     
     if choice == 'Image':
-        st.write('# Face Mask Image Detector')
          
-        st.markdown('<h2 align="center">Detection on Image</h2>', unsafe_allow_html=True)
+        st.markdown('<h2 align="center">Detection on Image :camera: </h2>', unsafe_allow_html=True)
         st.markdown('### Upload your image here ⬇')
         image_file = st.file_uploader("", type=['jpg', 'jpeg', 'png'])  # upload image
         if image_file is not None:
@@ -185,7 +184,7 @@ def mask_detection():
             if st.button('Facemask detector is analysing the image'):
                 st.image(face_mask, use_column_width=True)
         else:
-            st.markdown('<h3 align="center">Image limit is 200MB, try again!</h3>', unsafe_allow_html=True)
+            st.markdown('<h3 align="center">Image limit is 200MB</h3>', unsafe_allow_html=True)
 
     if choice == 'Webcam':
         st.markdown('<h2 align="center">Detection on Webcam</h2>', unsafe_allow_html=True)
