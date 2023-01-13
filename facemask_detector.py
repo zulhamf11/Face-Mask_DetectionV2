@@ -6,7 +6,7 @@ import numpy as np
 from tensorflow.keras.models import load_model
 
 filepath = './face_detector/'
-model_path = './model_test/mask_detectors.h5'
+model_path = './model/mask_detectors.h5'
 MY_CONFIDENCE = 0.9
 BATCH_SIZE = 32
 IMG_SIZE = (160, 160)

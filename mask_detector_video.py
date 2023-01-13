@@ -9,7 +9,7 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.image import img_to_array
 
 filepath = './face_detector/'
-model_path = './model_test/mask_detectors.model'
+model_path = './model/mask_detectors.model'
 MY_CONFIDENCE = 0.9
 BATCH_SIZE = 32
 IMG_SIZE = (224, 224)

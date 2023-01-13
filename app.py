@@ -11,8 +11,8 @@ from tensorflow.keras.preprocessing.image import img_to_array
 
 
 filepath = './face_detector/'
-model_path = './model_test/mask_detectors.h5'
-model_video = './model_test/mask_detectors.model'
+model_path = './model/mask_detectors.h5'
+model_video = './model/mask_detectors.model'
 image_test = './images_test/'
 MY_CONFIDENCE = 0.9
 BATCH_SIZE = 32
