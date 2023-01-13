@@ -39,7 +39,7 @@ def get_images_with_faces():
 
     # load the input image from disk and grab the image spatial
     # dimensions
-    image = cv2.imread('./images_test/save.jpg')
+    image = cv2.imread('./images_test/test.jpg')
     assert not isinstance(image, type(None)), 'image not found'
     (h, w) = image.shape[:2]
     blob = cv2.dnn.blobFromImage(image, 1.0, (300, 300), (104.0, 177.0, 123.0))
@@ -178,7 +178,7 @@ def mask_detection():
         image_file = st.file_uploader("", type=['jpg', 'jpeg', 'png'])  # upload image
         if image_file is not None:
             our_image = Image.open(image_file)  # making compatible to PIL
-            im = our_image.save('./images_test/save.jpg')
+            im = our_image.save('./images_test/test.jpg')
             saved_image = st.image(image_file, caption='', use_column_width=True)
             st.markdown('<h3 align="center">Image uploaded successfully!</h3>', unsafe_allow_html=True)
             if st.button('Facemask detector is analysing the image'):
