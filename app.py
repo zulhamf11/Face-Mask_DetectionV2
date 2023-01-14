@@ -70,8 +70,8 @@ def get_images_with_faces():
                 print('predicting the results')
                 results = model.predict_on_batch(face)
                 # print results
-                label = 'Mask' if results[0][0] < 0 else 'No Mask'
-                color = (0, 255, 0) if label == 'Mask' else (0, 0, 255)
+                label = 'With Mask' if results[0][0] < 0 else 'Without Mask'
+                color = (255, 165, 0) if label == "With Mask" else (0, 0, 255)
                 cv2.putText(image, label, (startX, startY - 10),
                             cv2.FONT_HERSHEY_SIMPLEX, 0.45, color, 2)
                 cv2.rectangle(image, (startX, startY), (endX, endY), color, 2)
@@ -149,8 +149,8 @@ class VideoTransformer(VideoTransformerBase):
 
             # determine the class label and color we'll use to draw
             # the bounding box and text
-            label = "Mask" if mask > withoutMask else "No Mask"
-            color = (0, 255, 0) if label == "Mask" else (0, 0, 255)
+            label = "With Mask" if mask > withoutMask else "Without Mask"
+            color = (255, 165, 0) if label == "With Mask" else (0, 0, 255)
             print('printing the mask detections')
 
             # display the label and bounding box rectangle on the output
